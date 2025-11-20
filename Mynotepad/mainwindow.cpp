@@ -1,5 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "aboutdialog.h"
+#include "searchdialog.h"
+#include "repalcedialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,7 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->statusbar->addPermanentWidget(&statusCursorLabel);
 
     QLabel *author = new QLabel(ui->statusbar);
-    author->setText(tr("刘文果"));
+    author->setText(tr("谭中文"));
     ui->statusbar->addPermanentWidget(author);
 }
 
@@ -25,3 +28,49 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_actionAbout_triggered()
+{
+    AboutDialog dlg;
+    dlg.exec();
+}
+
+
+void MainWindow::on_actionFind_triggered()
+{
+    SearchDialog dlg;
+    dlg.exec();
+}
+
+
+void MainWindow::on_actionRepalce_triggered()
+{
+    RepalceDialog dlg;
+    dlg.exec();
+}
+
+
+void MainWindow::on_actionNew_triggered()
+{
+    ui->textEdit->clear();
+    this->setWindowTitle(tr("新建文本文件 - 编辑器"));
+}
+
+
+void MainWindow::on_actionSave_triggered()
+{
+
+}
+
+
+void MainWindow::on_actionSaveAs_triggered()
+{
+
+}
+
+
+void MainWindow::on_actionOpen_triggered()
+{
+
+}
+
