@@ -1,14 +1,22 @@
-#include "aboutdialog.h"
-#include "ui_aboutdialog.h"
+#ifndef ABOUTDIALOG_H
+#define ABOUTDIALOG_H
 
-AboutDialog::AboutDialog(QWidget *parent)
-    : QDialog(parent)
-    , ui(new Ui::AboutDialog)
-{
-    ui->setupUi(this);
+#include <QDialog>
+
+namespace Ui {
+class AboutDialog;
 }
 
-AboutDialog::~AboutDialog()
+class AboutDialog : public QDialog
 {
-    delete ui;
-}
+    Q_OBJECT
+
+public:
+    explicit AboutDialog(QWidget *parent = nullptr);
+    ~AboutDialog();
+
+private:
+    Ui::AboutDialog *ui;
+};
+
+#endif // ABOUTDIALOG_H

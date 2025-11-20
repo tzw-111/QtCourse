@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     aboutdialog.cpp \
+    codeedit.cpp \
     main.cpp \
     mainwindow.cpp \
     repalcedialog.cpp \
@@ -17,6 +18,7 @@ SOURCES += \
 
 HEADERS += \
     aboutdialog.h \
+    codeedit.h \
     mainwindow.h \
     repalcedialog.h \
     searchdialog.h
