@@ -30,6 +30,10 @@ void MastarView::goWelcomView()
     qDebug()<<"goWelcomView";
     welcomeView = new WelcomeView(this);
     pushWidgetToStackView(welcomeView);
+
+    connect(welcomeView,SIGNAL(goDoctorView()),this,SLOT(goDoctorView()));
+    connect(welcomeView,SIGNAL(goPatientView()),this,SLOT(goPatientView()));
+    connect(welcomeView,SIGNAL(goDepartmentView()),this,SLOT(goDepartmentView()));
 }
 
 void MastarView::goDoctorView()
@@ -58,6 +62,8 @@ void MastarView::goPatientView()
     qDebug()<<"goPatientView";
     patientView = new PatientView(this);
     pushWidgetToStackView(patientView);
+
+    connect(patientView,SIGNAL(goPatientEditView()),this,SLOT(goPatientEditView()));
 }
 
 void MastarView::goPreviousView()

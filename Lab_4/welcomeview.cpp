@@ -15,3 +15,21 @@ WelcomeView::~WelcomeView()
     qDebug()<<"destory WelconView";
     delete ui;
 }
+
+void WelcomeView::on_pushButton_clicked()
+{
+    emit goDepartmentView();
+}
+
+
+void WelcomeView::on_pushButton_2_clicked()
+{
+    emit goDoctorView();
+}
+
+
+void WelcomeView::on_pushButton_3_clicked()
+{
+    emit goPatientView();
+}
+
