@@ -22,7 +22,7 @@ PatientEditView::PatientEditView(QWidget *parent,int index)
     dataMapper->addMapping(ui->dbEditMobile, tabModel->fieldIndex("MOBILEPHONE"));
     dataMapper->addMapping(ui->dbDateEditDOB,tabModel->fieldIndex("DOB"));
     dataMapper->addMapping(ui->dbComboSex,tabModel->fieldIndex("SEX"));
-    dataMapper->addMapping(ui->dbCreateTimeStamp,tabModel->fieldIndex("CREATETIMESTAMP"));
+    dataMapper->addMapping(ui->dbCreateTimeStamp,tabModel->fieldIndex("CREATEDTIMESTAMP"));
 
     dataMapper->setCurrentIndex(index);
 }
