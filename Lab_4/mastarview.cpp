@@ -1,6 +1,7 @@
 #include "mastarview.h"
 #include "ui_mastarview.h"
 #include <QDebug>
+#include "idatabase.h"
 
 MastarView::MastarView(QWidget *parent)
     : QWidget(parent)
@@ -8,9 +9,10 @@ MastarView::MastarView(QWidget *parent)
 {
     ui->setupUi(this);
 
-    this->setWindowFlag(Qt::FramelessWindowHint);
+    // this->setWindowFlag(Qt::FramelessWindowHint);
 
     goLoginView();
+    IDatabase::getInstance();
 }
 
 MastarView::~MastarView()
