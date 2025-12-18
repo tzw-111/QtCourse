@@ -38,6 +38,7 @@ public:
     bool deleteCurrentPatient();
     bool submitPatientEdit();
     void revertPatientEdit();
+    int addNewPatient();
 
     QSqlTableModel *patientTabModel;//数据模型
     QItemSelectionModel *thePatientSelection;//选择模型
