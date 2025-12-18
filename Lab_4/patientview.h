@@ -18,6 +18,12 @@ public:
 private slots:
     void on_btAdd_clicked();
 
+    void on_btSearch_clicked();
+
+    void on_brDelete_clicked();
+
+    void on_brEdit_clicked();
+
 signals:
     void goPatientEditView();
 
