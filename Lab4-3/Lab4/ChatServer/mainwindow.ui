@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>426</width>
+    <height>359</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>服务器</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="styleSheet">
+       <string notr="true">/* ======================
+   全局基础样式
+====================== */
+QWidget {
+    background-color: #f5f7fa;
+    font-family: &quot;Microsoft YaHei&quot;;
+    font-size: 14px;
+    color: #333333;
+}
+
+/* ======================
+   分组框（服务器日志）
+====================== */
+QGroupBox {
+    background-color: #ffffff;
+    border: 1px solid #dcdfe6;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 6px;
+    color: #2c3e50;
+}
+
+/* ======================
+   日志输出区
+====================== */
+QPlainTextEdit {
+    border: none;
+    background-color: #ffffff;
+    padding: 8px;
+    font-family: Consolas, &quot;Courier New&quot;, monospace;
+    font-size: 13px;
+    color: #303133;
+}
+
+/* ======================
+   启动 / 停止按钮
+====================== */
+QPushButton#startStopButton {
+    height: 34px;
+    min-width: 120px;
+    border-radius: 6px;
+    background-color: #67c23a;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+}
+
+QPushButton#startStopButton:hover {
+    background-color: #85ce61;
+}
+
+QPushButton#startStopButton:pressed {
+    background-color: #5daf34;
+}
+
+/* 停止状态（你在代码里 setProperty 或 setText 时切换） */
+QPushButton#startStopButton[stopped=&quot;true&quot;] {
+    background-color: #f56c6c;
+}
+
+QPushButton#startStopButton[stopped=&quot;true&quot;]:hover {
+    background-color: #f78989;
+}
+
+/* ======================
+   滚动条（日志用）
+====================== */
+QScrollBar:vertical {
+    width: 8px;
+    background: transparent;
+}
+
+QScrollBar::handle:vertical {
+    background: #c0c4cc;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #909399;
+}
+
+QScrollBar::add-line,
+QScrollBar::sub-line {
+    height: 0px;
+}
+</string>
+      </property>
+      <property name="title">
+       <string>服务器日志</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPlainTextEdit" name="logEditor"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="startStopButton">
+        <property name="text">
+         <string>开启服务器</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
