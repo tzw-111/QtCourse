@@ -86,6 +86,8 @@ QStringList LogParserThread::parseLogLine(const QString &line)
         QString content = match.captured(4).trimmed();
         return {time, level, content};
     }
-
+// Add source
+    // Add source
+    // Add source
     return {};
 }
