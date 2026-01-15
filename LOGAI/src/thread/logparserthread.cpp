@@ -89,6 +89,6 @@ QStringList LogParserThread::parseLogLine(const QString &line)
 // Add source
     // Add source
     // Add source
-// Add source// Add source// Add sou
+// Add source// Add source// Add
     return {};
 }
